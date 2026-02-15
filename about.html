@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========================== Basic Meta ========================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========================== Title ========================== -->
+    <title>Decoderz</title>
+
+    <!-- ========================== Lenis CSS ========================== -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.16/dist/lenis.css">
+
+    <!-- ========================== Bootstrap CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+
+    <!-- ========================== Font Awesome CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- ========================== Slick Slider CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <!-- ========================== AOS Animation CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- ========================== style-rtl.css ==========================  -->
+    <!-- <link rel="stylesheet" href="./assets/css/style-rtl.css"> -->
+    <!-- ========================== Main Style CSS ========================== -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- ========================== Sidebar Overlay ========================== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ========================== Sidebar Panel ========================== -->
+    <div class="sidebar-panel" id="sidebarPanel">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <img src="./assets/img/logo_sidebar.svg" alt="Decoderz">
+            </div>
+            <button class="sidebar-close" id="sidebarClose">
+                <img src="./assets/img/close-circle.svg" alt="Close">
+            </button>
+        </div>
+
+        <div class="sidebar-content">
+            <h3 class="sidebar-title">Smart Business Consultancy</h3>
+            <p class="sidebar-subtitle">in New Milton</p>
+            <p style="color: #6b7280; font-size: 14px; margin-bottom: 30px;">
+                We denounce with righteous indignation and dislike men who are to beguiled demoralized by the charms of
+                pleasures that moment, so we blinded desires.
+            </p>
+
+            <h4 style="font-size: 16px; font-weight: 700; color: #1f2937; margin-bottom: 20px;">Contact Info</h4>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Address</h6>
+                    <p>98, Zahraa Street, Maadi, Cairo</p>
+                </div>
+            </div>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Email</h6>
+                    <p>info@decoder.com</p>
+                </div>
+            </div>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Phone</h6>
+                    <p>010-00-000-000</p>
+                </div>
+            </div>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="far fa-clock"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Office Hours</h6>
+                    <p>Today 9:00am to 6:00pm</p>
+                </div>
+            </div>
+
+            <div class="sidebar-newsletter">
+                <h4>newsletter Subscribe</h4>
+                <form class="newsletter-form">
+                    <div class="input-wrapper">
+                        <img src="./assets/img/emil.svg" alt="email icon" class="input-icon">
+                        <input type="email" placeholder="Enter your email address" required>
+                    </div>
+                    <button type="submit">Subscribe Us</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================== Top Bar ========================== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-bar-left">
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="0">
+                            <i class="far fa-clock"></i>
+                            <span>Office Hrs: Today 9:00am to 6:00pm</span>
+                        </div>
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="100">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+88 (0) 101 0000 000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="top-bar-right">
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="200">
+                            <i class="far fa-clock"></i>
+                            <span>Office Hrs: Today 9:00am to 6:00pm</span>
+                        </div>
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="300">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+88 (0) 101 0000 38</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================== Header / Navbar ========================== -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#" data-aos="fade-right" data-aos-duration="800">
+                    <img src="./assets/img/logo.svg" alt="Decoderz">
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="0">
+                            <a class="nav-link " href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="50">
+                            <a class="nav-link active" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown" data-aos="fade-down" data-aos-delay="100">
+                            <a class="nav-link" href="#" role="button">
+                                Services <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./service_details.html">Web Development</a></li>
+                                <li><a class="dropdown-item" href="./service_details.html">Mobile Apps</a></li>
+                                <li><a class="dropdown-item" href="./service_details.html">Digital Marketing</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" data-aos="fade-down" data-aos-delay="150">
+                            <a class="nav-link" href="#" role="button">
+                                Portfolio <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./portfolio.html">Web Design</a></li>
+                                <li><a class="dropdown-item" href="./portfolio.html">App Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="250">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                            <button class="nav-toggle-btn" id="sidebarToggle">
+                                <img src="./assets/img/Icons.svg" alt="">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================== About banner ========================== -->
+        <section class="hero_about_main">
+            <div class="container">
+                <div class="hero_content">
+                    <h1>About Company</h1>
+                    <div class="breadcrumb">
+                        <a href="#">Home</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                        <span>About</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================== About Section ========================== -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="image-block">
+                            <div class="image-one" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                                <div class="image-box">
+                                    <img src="./assets/img/about_main.jpg" alt="About Main Image">
+                                </div>
+                            </div>
+                            <div class="image-two" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+                                <div class="image-box">
+                                    <img src="./assets/img/top_main.jpg" alt="About Secondary Image">
+                                </div>
+                            </div>
+                            <div class="logo">
+                                <img class="logo_main_img" src="./assets/img/main.svg" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="sec-title">
+                            <h2>#1 Software agency for small & Large businesses</h2>
+                            <div class="text-decoration">
+                                <img src="./assets/img/icon_main.svg" alt="Decoration">
+                            </div>
+                            <div class="text">
+                                Every pleasures is too welcomed pain avoided owing the duty obligations of
+                                business it will frequently occur that pleasures have be repudiated and annoyances
+                                accepted pleasures is to welcomed.
+                            </div>
+                        </div>
+
+                        <div class="author-box" data-aos="fade-left" data-aos-delay="200">
+                            <div class="signature">
+                                <img src="http://el.commonsupport.com/newwp/envolve3/wp-content/uploads/2020/05/signature.png"
+                                    alt="Signature">
+                            </div>
+                            <div class="author-info">
+                                <h4>Hazem Fawzi</h4>
+                                <h5>Manager</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================== reason-section ========================== -->
+        <section class="reason-section">
+            <div class="container">
+                <div class="reason-wrapper">
+                    <!-- Left Side - Text Content -->
+                    <div class="reason-content">
+                        <h2 class="reason-title">
+                            Reason for choosing our<br>
+                            Services
+                        </h2>
+                        <div class="title-underline"></div>
+
+                        <div class="reason-list">
+                            <!-- Item 1 -->
+                            <div class="reason-item">
+                                <div class="reason-icon">
+                                    <img src="./assets/img/main.svg" alt="Logo">
+                                </div>
+                                <div class="reason-text">
+                                    <h3>Tailored advice and support</h3>
+                                    <p>Business that frequently solve that resources have to be repudiated annoyances
+                                        accepted</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="reason-item">
+                                <div class="reason-icon">
+                                    <img src="./assets/img/main.svg" alt="Logo">
+                                </div>
+                                <div class="reason-text">
+                                    <h3>Tailored advice and support</h3>
+                                    <p>Business that frequently solve that resources have to be repudiated annoyances
+                                        accepted</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Video Section -->
+                    <div class="video-section">
+                        <!-- Orange Overlay -->
+                        <div class="orange-overlay"></div>
+
+                        <!-- Video Background -->
+                        <div class="video-background">
+                            <!-- استخدم الصورة كخلفية احتياطية -->
+                            <img src="./assets/img/vido.png" alt="Video Thumbnail">
+
+                            <!-- Video - سيتم إخفاؤه على الموبايل إذا لم يعمل -->
+                            <!-- <video autoplay muted loop playsinline poster="./assets/img/vido.png">
+                        <source src="your-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> -->
+                        </div>
+
+                        <!-- Play Button -->
+                        <div class="play-button-wrapper">
+                            <button class="play-button" onclick="playVideo(this)">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================== footer ========================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-left">
+                    <div class="logo">
+                        <img src="./assets/img/logo_main.svg" alt="">
+                    </div>
+                    <div class="cta-text">What will<br>be the next step?</div>
+                    <a href="#" class="cta-link">Experts advice</a>
+                </div>
+
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3 class="column-title">Company</h3>
+                        <ul class="column-links">
+                            <li><a href="#">About Evoqius</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Company History</a></li>
+                            <li><a href="#">Our Career</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3 class="column-title">Company</h3>
+                        <ul class="column-links">
+                            <li><a href="#">About Evoqius</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Company History</a></li>
+                            <li><a href="#">Our Career</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <h3 class="column-title">Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span style="color: #8b95a8;">/</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+                <div class="main_footer_lin">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">𝕏</a>
+                        <a href="#" class="social-icon">f</a>
+                    </div>
+                    <div class="copyright">
+                        2025 Decoderz. All Rights Reserved.
+                    </div>
+                </div>
+
+                <a href="#" class="back-to-home">Go back to home</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ========================== topBtn ========================== -->
+    <div class="top-btn" id="topBtn">
+        <i class="fa-solid fa-circle-arrow-up"></i>
+    </div>
+
+    <!-- ========================== jQuery ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- ========================== Bootstrap JS ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========================== Slick Slider JS ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- ========================== ScrollReveal JS ========================== -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ========================== AOS JS ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- ========================== Lenis JS ========================== -->
+    <script src="https://unpkg.com/lenis@1.3.16/dist/lenis.min.js"></script>
+
+    <!-- ========================== Main Script JS ========================== -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

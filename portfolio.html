@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========================== Basic Meta ========================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========================== Title ========================== -->
+    <title>Decoderz</title>
+
+    <!-- ========================== Lenis CSS ========================== -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.16/dist/lenis.css">
+
+    <!-- ========================== Bootstrap CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+
+    <!-- ========================== Font Awesome CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- ========================== Slick Slider CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <!-- ========================== AOS Animation CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- ========================== style-rtl.css ==========================  -->
+    <!-- <link rel="stylesheet" href="./assets/css/style-rtl.css"> -->
+
+    <!-- ========================== Main Style CSS ========================== -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- ========================== Sidebar Overlay ========================== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ========================== Sidebar Panel ========================== -->
+    <div class="sidebar-panel" id="sidebarPanel">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <img src="./assets/img/logo_sidebar.svg" alt="Decoderz">
+            </div>
+            <button class="sidebar-close" id="sidebarClose">
+                <img src="./assets/img/close-circle.svg" alt="Close">
+            </button>
+        </div>
+
+        <div class="sidebar-content">
+            <h3 class="sidebar-title">Smart Business Consultancy</h3>
+            <p class="sidebar-subtitle">in New Milton</p>
+            <p style="color: #6b7280; font-size: 14px; margin-bottom: 30px;">
+                We denounce with righteous indignation and dislike men who are to beguiled demoralized by the charms of
+                pleasures that moment, so we blinded desires.
+            </p>
+
+            <h4 style="font-size: 16px; font-weight: 700; color: #1f2937; margin-bottom: 20px;">Contact Info</h4>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Address</h6>
+                    <p>98, Zahraa Street, Maadi, Cairo</p>
+                </div>
+            </div>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Email</h6>
+                    <p>info@decoder.com</p>
+                </div>
+            </div>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Phone</h6>
+                    <p>010-00-000-000</p>
+                </div>
+            </div>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="far fa-clock"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Office Hours</h6>
+                    <p>Today 9:00am to 6:00pm</p>
+                </div>
+            </div>
+
+            <div class="sidebar-newsletter">
+                <h4>newsletter Subscribe</h4>
+                <form class="newsletter-form">
+                    <div class="input-wrapper">
+                        <img src="./assets/img/emil.svg" alt="email icon" class="input-icon">
+                        <input type="email" placeholder="Enter your email address" required>
+                    </div>
+                    <button type="submit">Subscribe Us</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================== Top Bar ========================== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-bar-left">
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="0">
+                            <i class="far fa-clock"></i>
+                            <span>Office Hrs: Today 9:00am to 6:00pm</span>
+                        </div>
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="100">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+88 (0) 101 0000 000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="top-bar-right">
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="200">
+                            <i class="far fa-clock"></i>
+                            <span>Office Hrs: Today 9:00am to 6:00pm</span>
+                        </div>
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="300">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+88 (0) 101 0000 38</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================== Header / Navbar ========================== -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#" data-aos="fade-right" data-aos-duration="800">
+                    <img src="./assets/img/logo.svg" alt="Decoderz">
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="0">
+                            <a class="nav-link active" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="50">
+                            <a class="nav-link " href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown" data-aos="fade-down" data-aos-delay="100">
+                            <a class="nav-link" href="#" role="button">
+                                Services <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./service_details.html">Web Development</a></li>
+                                <li><a class="dropdown-item" href="./service_details.html">Mobile Apps</a></li>
+                                <li><a class="dropdown-item" href="./service_details.html">Digital Marketing</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" data-aos="fade-down" data-aos-delay="150">
+                            <a class="nav-link" href="#" role="button">
+                                Portfolio <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./portfolio.html">Web Design</a></li>
+                                <li><a class="dropdown-item" href="./portfolio.html">App Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="250">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                            <button class="nav-toggle-btn" id="sidebarToggle">
+                                <img src="./assets/img/Icons.svg" alt="">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================== About banner ========================== -->
+        <section class="hero_about_main">
+            <div class="container">
+                <div class="hero_content">
+                    <h1>Portfolio</h1>
+                    <div class="breadcrumb">
+                        <a href="#">Home</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                        <span>About</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Projects alin_project">
+            <div class="container">
+                <!-- Tabs Header -->
+                <div class="tabs-header">
+                    <button class="tab-button active" onclick="switchTab('web-design')">Web Design</button>
+                    <button class="tab-button" onclick="switchTab('app-design')">App Design</button>
+                </div>
+
+                <!-- Title Section -->
+                <div class="title-section">
+                    <h1>Our Projects make <span class="highlight">Uniqueness</span></h1>
+                    <h1>from Others</h1>
+                    <div class="divider">
+                        <img style="margin: 0 auto; text-align: center;" src="./assets/img/icon_main.svg"
+                            alt="Decoration">
+                    </div>
+                </div>
+
+                <!-- Web Design Tab Content -->
+                <div id="web-design" class="tab-content active">
+                    <div class="projects-grid">
+                        <!-- Project Card 1 -->
+                        <div class="project-card" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                            <div class="card-bg-image" style="background-image: url('./assets/img/project1.jpg');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <div class="monitor-wrapper">
+                                    <img src="./assets/img/Apple_iMac.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="business-card">
+                                <div class="card-logo">
+                                    <img src="./assets/img/sddf.svg" alt="">
+                                </div>
+                                <div class="card-circle">
+                                    <img src="./assets/img/arrow_down.svg" alt="">
+                                </div>
+                                <div class="card-company">Business Name</div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 2 -->
+                        <div class="project-card" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">
+                            <div class="card-bg-image" style="background-image: url('./assets/img/project2.jpg');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <div class="monitor-wrapper">
+                                    <img src="./assets/img/Apple_iMac.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="business-card">
+                                <div class="card-logo">
+                                    <img src="./assets/img/sddf.svg" alt="">
+                                </div>
+                                <div class="card-circle">
+                                    <img src="./assets/img/arrow_down.svg" alt="">
+                                </div>
+                                <div class="card-company">Business Name</div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 3 -->
+                        <div class="project-card" data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000">
+                            <div class="card-bg-image" style="background-image: url('./assets/img/project3.jpg');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <div class="monitor-wrapper">
+                                    <img src="./assets/img/Apple_iMac.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="business-card">
+                                <div class="card-logo">
+                                    <img src="./assets/img/sddf.svg" alt="">
+                                </div>
+                                <div class="card-circle">
+                                    <img src="./assets/img/arrow_down.svg" alt="">
+                                </div>
+                                <div class="card-company">Business Name</div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 4 -->
+                        <div class="project-card" data-aos="flip-left" data-aos-delay="400" data-aos-duration="1000">
+                            <div class="card-bg-image" style="background-image: url('./assets/img/project4.jpg');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <div class="monitor-wrapper">
+                                    <img src="./assets/img/Apple_iMac.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="business-card">
+                                <div class="card-logo">
+                                    <img src="./assets/img/sddf.svg" alt="">
+                                </div>
+                                <div class="card-circle">
+                                    <img src="./assets/img/arrow_down.svg" alt="">
+                                </div>
+                                <div class="card-company">Business Name</div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 5 -->
+                        <div class="project-card" data-aos="flip-left" data-aos-delay="500" data-aos-duration="1000">
+                            <div class="card-bg-image" style="background-image: url('./assets/img/project5.jpg');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <div class="monitor-wrapper">
+                                    <img src="./assets/img/Apple_iMac.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="business-card">
+                                <div class="card-logo">
+                                    <img src="./assets/img/sddf.svg" alt="">
+                                </div>
+                                <div class="card-circle">
+                                    <img src="./assets/img/arrow_down.svg" alt="">
+                                </div>
+                                <div class="card-company">Business Name</div>
+                            </div>
+                        </div>
+
+                        <!-- Special Card - Check More Works -->
+                        <div class="project-card special-card" data-aos="zoom-in" data-aos-delay="600"
+                            data-aos-duration="1000">
+                            <div class="card-content">
+                                <div class="check-more-btn">
+                                    Check<br>More Works
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App Design Tab Content -->
+                <div id="app-design" class="tab-content">
+                    <div class="projects-grid">
+                        <!-- Project Card 1 -->
+                        <div class="project-card" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                            <div class="card-bg-image" style="background-image: url('./assets/img/project1.jpg');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <div class="monitor-wrapper">
+                                    <img src="./assets/img/Apple_iMac.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="business-card">
+                                <div class="card-logo">
+                                    <img src="./assets/img/sddf.svg" alt="">
+                                </div>
+                                <div class="card-circle">
+                                    <img src="./assets/img/arrow_down.svg" alt="">
+                                </div>
+                                <div class="card-company">Business Name</div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 2 -->
+                        <div class="project-card" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">
+                            <div class="card-bg-image" style="background-image: url('./assets/img/project2.jpg');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <div class="monitor-wrapper">
+                                    <img src="./assets/img/Apple_iMac.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="business-card">
+                                <div class="card-logo">
+                                    <img src="./assets/img/sddf.svg" alt="">
+                                </div>
+                                <div class="card-circle">
+                                    <img src="./assets/img/arrow_down.svg" alt="">
+                                </div>
+                                <div class="card-company">Business Name</div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 3 -->
+                        <div class="project-card" data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000">
+                            <div class="card-bg-image" style="background-image: url('./assets/img/project3.jpg');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <div class="monitor-wrapper">
+                                    <img src="./assets/img/Apple_iMac.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="business-card">
+                                <div class="card-logo">
+                                    <img src="./assets/img/sddf.svg" alt="">
+                                </div>
+                                <div class="card-circle">
+                                    <img src="./assets/img/arrow_down.svg" alt="">
+                                </div>
+                                <div class="card-company">Business Name</div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 4 -->
+                        <div class="project-card" data-aos="flip-left" data-aos-delay="400" data-aos-duration="1000">
+                            <div class="card-bg-image" style="background-image: url('./assets/img/project4.jpg');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <div class="monitor-wrapper">
+                                    <img src="./assets/img/Apple_iMac.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="business-card">
+                                <div class="card-logo">
+                                    <img src="./assets/img/sddf.svg" alt="">
+                                </div>
+                                <div class="card-circle">
+                                    <img src="./assets/img/arrow_down.svg" alt="">
+                                </div>
+                                <div class="card-company">Business Name</div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 5 -->
+                        <div class="project-card" data-aos="flip-left" data-aos-delay="500" data-aos-duration="1000">
+                            <div class="card-bg-image" style="background-image: url('./assets/img/project5.jpg');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <div class="monitor-wrapper">
+                                    <img src="./assets/img/Apple_iMac.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="business-card">
+                                <div class="card-logo">
+                                    <img src="./assets/img/sddf.svg" alt="">
+                                </div>
+                                <div class="card-circle">
+                                    <img src="./assets/img/arrow_down.svg" alt="">
+                                </div>
+                                <div class="card-company">Business Name</div>
+                            </div>
+                        </div>
+
+                        <!-- Special Card - Check More Works -->
+                        <div class="project-card special-card" data-aos="zoom-in" data-aos-delay="600"
+                            data-aos-duration="1000">
+                            <div class="card-content">
+                                <div class="check-more-btn">
+                                    Check<br>More Works
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================== footer ========================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-left">
+                    <div class="logo">
+                        <img src="./assets/img/logo_main.svg" alt="">
+                    </div>
+                    <div class="cta-text">What will<br>be the next step?</div>
+                    <a href="#" class="cta-link">Experts advice</a>
+                </div>
+
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3 class="column-title">Company</h3>
+                        <ul class="column-links">
+                            <li><a href="#">About Evoqius</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Company History</a></li>
+                            <li><a href="#">Our Career</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3 class="column-title">Company</h3>
+                        <ul class="column-links">
+                            <li><a href="#">About Evoqius</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Company History</a></li>
+                            <li><a href="#">Our Career</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <h3 class="column-title">Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span style="color: #8b95a8;">/</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+                <div class="main_footer_lin">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">𝕏</a>
+                        <a href="#" class="social-icon">f</a>
+                    </div>
+                    <div class="copyright">
+                        2025 Decoderz. All Rights Reserved.
+                    </div>
+                </div>
+
+                <a href="#" class="back-to-home">Go back to home</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ========================== topBtn ========================== -->
+    <div class="top-btn" id="topBtn">
+        <i class="fa-solid fa-circle-arrow-up"></i>
+    </div>
+
+    <!-- ========================== jQuery ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- ========================== Bootstrap JS ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========================== Slick Slider JS ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- ========================== ScrollReveal JS ========================== -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ========================== AOS JS ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- ========================== Lenis JS ========================== -->
+    <script src="https://unpkg.com/lenis@1.3.16/dist/lenis.min.js"></script>
+
+    <!-- ========================== Main Script JS ========================== -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
