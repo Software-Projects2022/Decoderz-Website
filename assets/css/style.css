@@ -114,15 +114,15 @@ img {
 .top-btn {
   position: fixed;
   bottom: 30px;
-  right: 30px;
-  width: 55px;
-  height: 55px;
-  background: linear-gradient(135deg, #ff512f, #f09819);
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: var(--main-color);
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 20%;
   cursor: pointer;
   font-size: 22px;
   opacity: 0;
@@ -131,6 +131,10 @@ img {
   transition: 0.4s ease;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   z-index: 999;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  -o-border-radius: 20%;
 }
 
 .top-btn.show {
@@ -2926,8 +2930,8 @@ body.scrolled {
 }
 
 
-@media(max-width:991px){
-  .service_details_main .content{
+@media(max-width:991px) {
+  .service_details_main .content {
     grid-template-columns: 1fr;
   }
 }
@@ -5534,3 +5538,121 @@ body.scrolled {
     font-size: 12px;
   }
 }
+
+/* ===== SHARED FLOAT BTN ===== */
+.float-btn {
+  width: 40px;
+  height: 40px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.floating-right .float-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+
+.floating-left .float-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: calc(100% + 10px);
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.float-btn:hover::after {
+  opacity: 1;
+}
+
+.floating-right {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.floating-left {
+  position: fixed;
+  top: 190px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  background: var(--main-color);
+  border-radius: 0 14px 14px 0;
+  overflow: hidden;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.floating-left .float-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 0;
+  font-size: 1.15rem;
+  background: transparent !important;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.floating-left .float-btn:last-child {
+  border-bottom: none;
+}
+
+.floating-left .float-btn:hover {
+  transform: none;
+  background: rgba(255, 255, 255, 0.13) !important;
+  box-shadow: none;
+  color: #fff;
+}
+
+.floating-left .float-btn::after {
+  left: calc(100% + 10px);
+  right: auto;
+}
+
+/* ===== COLORS: RIGHT SIDE ===== */
+.btn-whatsapp {
+  background: #25D366;
+}
+
+.btn-call {
+  background: #007AFF
+}
+
+;
