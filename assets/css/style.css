@@ -2925,6 +2925,13 @@ body.scrolled {
   align-items: start;
 }
 
+
+@media(max-width:991px){
+  .service_details_main .content{
+    grid-template-columns: 1fr;
+  }
+}
+
 .service_details_main .main_details_tow {
   display: flex;
   flex-direction: column;
