@@ -33,14 +33,12 @@ $(document).ready(function () {
   }
 
   if ($(window).width() <= 991) {
-    // Close menu when clicking outside
     $(document).on("click", function (e) {
       if (!$(e.target).closest(".navbar-collapse, .navbar-toggler").length) {
         closeMobileMenu();
       }
     });
 
-    // Close menu when clicking the pseudo-element close button
     $(".navbar-collapse").on("click", function (e) {
       const rect = this.getBoundingClientRect();
       const x = e.clientX - rect.right + 40;
@@ -52,7 +50,6 @@ $(document).ready(function () {
     });
   }
 
-  // Toggle body overflow when mobile menu opens/closes
   $(".navbar-toggler").on("click", function () {
     setTimeout(function () {
       if ($(".navbar-collapse").hasClass("show")) {
@@ -98,65 +95,61 @@ $(document).ready(function () {
   // ================================================================================================
   // HERO SLIDER - Slick slider initialization
   // ================================================================================================
-  $(document).ready(function () {
-    if ($(".hero-slider").length) {
-      $(".hero-slider").slick({
-        dots: false,
-        infinite: true,
-        speed: 800,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        arrows: false,
-        fade: true,
-        rtl: false,
-        cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
-        pauseOnHover: true,
-        pauseOnFocus: true,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              dots: false,
-              autoplaySpeed: 3000,
-            },
+  if ($(".hero-slider").length) {
+    $(".hero-slider").slick({
+      dots: false,
+      infinite: true,
+      speed: 800,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      arrows: false,
+      fade: true,
+      rtl: false,
+      cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
+      pauseOnHover: true,
+      pauseOnFocus: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            dots: false,
+            autoplaySpeed: 3000,
           },
-          {
-            breakpoint: 576,
-            settings: {
-              arrows: false,
-              dots: false,
-              autoplaySpeed: 3000,
-            },
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            arrows: false,
+            dots: false,
+            autoplaySpeed: 3000,
           },
-        ],
-      });
-    }
-  });
+        },
+      ],
+    });
+  }
 
   // ================================================================================================
   // AOS ANIMATION - Initialize and configure scroll animations
   // ================================================================================================
   if (typeof AOS !== "undefined") {
     AOS.init({
-      duration: 1000,        // Animation duration in ms
-      easing: "ease-in-out", // Easing function
-      once: false,           // Repeat animation on scroll
-      mirror: true,          // Animate on scroll up as well
-      offset: 120,           // Offset from trigger point
-      delay: 0,              // No global delay
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+      mirror: true,
+      offset: 120,
+      delay: 0,
       anchorPlacement: "top-bottom",
-      disable: false,        // Enable on all devices
+      disable: false,
     });
 
-    // Refresh AOS after page fully loads
     window.addEventListener("load", function () {
       AOS.refresh();
     });
 
-    // Refresh AOS on scroll (debounced)
     let scrollTimeout;
     window.addEventListener("scroll", function () {
       clearTimeout(scrollTimeout);
@@ -169,8 +162,6 @@ $(document).ready(function () {
   // ================================================================================================
   // AOS ANIMATIONS - Apply animations to elements dynamically
   // ================================================================================================
-
-  // Animate navigation items on page load
   $(".nav-item").each(function (index) {
     $(this).attr({
       "data-aos": "fade-down",
@@ -179,7 +170,6 @@ $(document).ready(function () {
     });
   });
 
-  // Animate contact form fields
   $(".contact-form .form-group").each(function (index) {
     $(this).attr({
       "data-aos": "fade-up",
@@ -188,7 +178,6 @@ $(document).ready(function () {
     });
   });
 
-  // Animate work process cards
   $(".col_grid_process").each(function (index) {
     $(this).attr({
       "data-aos": "zoom-in",
@@ -197,7 +186,6 @@ $(document).ready(function () {
     });
   });
 
-  // Animate blog cards
   $(".blog-card").each(function (index) {
     $(this).attr({
       "data-aos": "fade-up",
@@ -206,7 +194,6 @@ $(document).ready(function () {
     });
   });
 
-  // Animate map section
   if ($(".map-section").length) {
     $(".map-section").attr({
       "data-aos": "fade-right",
@@ -221,7 +208,6 @@ $(document).ready(function () {
     });
   }
 
-  // Animate newsletter section
   if ($(".newsletter-section").length) {
     $(".newsletter-section").attr({
       "data-aos": "fade-right",
@@ -229,7 +215,6 @@ $(document).ready(function () {
     });
   }
 
-  // Refresh AOS after applying all dynamic animations
   if (typeof AOS !== "undefined") {
     setTimeout(function () {
       AOS.refresh();
@@ -250,7 +235,6 @@ $(document).ready(function () {
       touchMultiplier: 2,
     });
 
-    // Animation loop
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -258,7 +242,6 @@ $(document).ready(function () {
 
     requestAnimationFrame(raf);
 
-    // Smooth scroll to anchor links
     $('a[href^="#"]').on("click", function (e) {
       e.preventDefault();
       const target = $(this.getAttribute("href"));
@@ -284,12 +267,10 @@ $(document).ready(function () {
 // WINDOW LOAD EVENT - Runs after all assets are loaded
 // ================================================================================================
 $(window).on("load", function () {
-  // Refresh AOS on load
   if (typeof AOS !== "undefined") {
     AOS.refresh();
   }
 
-  // Refresh hero slider on load
   if (
     $(".hero-slider").length &&
     $(".hero-slider").hasClass("slick-initialized")
@@ -302,13 +283,11 @@ $(window).on("load", function () {
 // WINDOW RESIZE EVENT - Handle layout changes on resize
 // ================================================================================================
 $(window).on("resize", function () {
-  // Restore body overflow on desktop
   if ($(window).width() > 991) {
     $("body").css("overflow", "auto");
     $(".navbar-collapse").removeClass("show");
   }
 
-  // Refresh AOS on resize
   if (typeof AOS !== "undefined") {
     AOS.refresh();
   }
@@ -323,7 +302,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const sidebarOverlay = document.getElementById("sidebarOverlay");
   const sidebarClose   = document.getElementById("sidebarClose");
 
-  // Open sidebar
   function openSidebar() {
     sidebarPanel.classList.add("active");
     sidebarOverlay.classList.add("active");
@@ -332,7 +310,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.top = `-${scrollY}px`;
   }
 
-  // Close sidebar and restore scroll position
   function closeSidebar() {
     sidebarPanel.classList.remove("active");
     sidebarOverlay.classList.remove("active");
@@ -342,12 +319,10 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo(0, parseInt(scrollY || "0") * -1);
   }
 
-  // Bind open/close events
   if (sidebarToggle)  sidebarToggle.addEventListener("click", openSidebar);
   if (sidebarClose)   sidebarClose.addEventListener("click", closeSidebar);
   if (sidebarOverlay) sidebarOverlay.addEventListener("click", closeSidebar);
 
-  // Close sidebar on Escape key
   document.addEventListener("keydown", function (e) {
     if (
       e.key === "Escape" &&
@@ -358,7 +333,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Prevent scroll events from bubbling out of sidebar
   if (sidebarPanel) {
     sidebarPanel.addEventListener("wheel",     function (e) { e.stopPropagation(); }, { passive: true });
     sidebarPanel.addEventListener("touchmove", function (e) { e.stopPropagation(); }, { passive: true });
@@ -412,14 +386,13 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
       entry.target.classList.add("counted");
-      const numberText  = entry.target.textContent.replace("K", "");
+      const numberText   = entry.target.textContent.replace("K", "");
       const targetNumber = parseFloat(numberText);
       animateCounter(entry.target, targetNumber);
     }
   });
 }, observerOptions);
 
-// Observe all stat number elements
 document.addEventListener("DOMContentLoaded", () => {
   const statNumbers = document.querySelectorAll(".stat-number");
   statNumbers.forEach((number) => {
@@ -455,33 +428,34 @@ $(document).ready(function () {
 
   // Hero slider (with mouse pause/play)
   if ($(".hero-slider").length) {
-    $(".hero-slider").slick({
-      dots: false,
-      infinite: true,
-      speed: 800,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      arrows: false,
-      fade: true,
-      rtl: false,
-      cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
-      pauseOnHover: true,
-      pauseOnFocus: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: { arrows: false, dots: false, autoplaySpeed: 3000 },
-        },
-        {
-          breakpoint: 576,
-          settings: { arrows: false, dots: false, autoplaySpeed: 3000 },
-        },
-      ],
-    });
+    if (!$(".hero-slider").hasClass("slick-initialized")) {
+      $(".hero-slider").slick({
+        dots: false,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false,
+        fade: true,
+        rtl: false,
+        cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: { arrows: false, dots: false, autoplaySpeed: 3000 },
+          },
+          {
+            breakpoint: 576,
+            settings: { arrows: false, dots: false, autoplaySpeed: 3000 },
+          },
+        ],
+      });
+    }
 
-    // Pause on hover, resume on mouse leave
     $(".hero-slider")
       .on("mouseenter", function () { $(this).slick("slickPause"); })
       .on("mouseleave", function () { $(this).slick("slickPlay");  });
@@ -493,37 +467,40 @@ $(document).ready(function () {
 // ================================================================================================
 const topBtn = document.getElementById("topBtn");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    topBtn.classList.add("show");
-  } else {
-    topBtn.classList.remove("show");
-  }
-});
+if (topBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      topBtn.classList.add("show");
+    } else {
+      topBtn.classList.remove("show");
+    }
+  });
 
-topBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 // ================================================================================================
 // TAB SWITCHER - Switch between tab panels
 // ================================================================================================
 function switchTab(tabName) {
-  // Hide all tab content panels
   document.querySelectorAll(".tab-content").forEach((content) => {
     content.classList.remove("active");
   });
 
-  // Remove active state from all tab buttons
   document.querySelectorAll(".tab-button").forEach((button) => {
     button.classList.remove("active");
   });
 
-  // Show the selected tab content
-  document.getElementById(tabName).classList.add("active");
+  const targetTab = document.getElementById(tabName);
+  if (targetTab) {
+    targetTab.classList.add("active");
+  }
 
-  // Mark the clicked button as active
-  event.target.classList.add("active");
+  if (event && event.target) {
+    event.target.classList.add("active");
+  }
 }
 
 // ================================================================================================
@@ -536,32 +513,30 @@ const leadIcon  = document.getElementById("csLeadIcon");
 const leadIconI = document.getElementById("csLeadIconI");
 const options   = document.querySelectorAll(".cs-option");
 
-// Toggle dropdown open/close
-trigger.addEventListener("click", (e) => {
-  e.stopPropagation();
-  wrap.classList.toggle("open");
-});
+if (wrap && trigger && label && leadIcon && leadIconI) {
 
-// Handle option selection
-options.forEach((opt) => {
-  opt.addEventListener("click", () => {
-    label.textContent = opt.dataset.label;
-    label.classList.add("selected");
-    leadIcon.style.background = opt.dataset.bg;
-    leadIcon.style.color      = opt.dataset.color;
-    leadIconI.className       = opt.dataset.icon;
-
-    // Update active state
-    options.forEach((o) => o.classList.remove("active"));
-    opt.classList.add("active");
-
-    // Close dropdown
-    wrap.classList.remove("open");
+  trigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    wrap.classList.toggle("open");
   });
-});
 
-// Close dropdown when clicking outside
-document.addEventListener("click", () => wrap.classList.remove("open"));
+  options.forEach((opt) => {
+    opt.addEventListener("click", () => {
+      label.textContent = opt.dataset.label;
+      label.classList.add("selected");
+      leadIcon.style.background = opt.dataset.bg;
+      leadIcon.style.color      = opt.dataset.color;
+      leadIconI.className       = opt.dataset.icon;
+
+      options.forEach((o) => o.classList.remove("active"));
+      opt.classList.add("active");
+
+      wrap.classList.remove("open");
+    });
+  });
+
+  document.addEventListener("click", () => wrap.classList.remove("open"));
+}
 
 // ================================================================================================
 // END OF FILE

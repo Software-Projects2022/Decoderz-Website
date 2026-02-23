@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- ========================== Basic Meta ========================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========================== Title ========================== -->
+    <title>Decoderz</title>
+
+    <!-- ========================== Lenis CSS ========================== -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.16/dist/lenis.css">
+
+    <!-- ========================== Bootstrap CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+
+    <!-- ========================== Font Awesome CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- ========================== Slick Slider CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <!-- ========================== AOS Animation CSS ========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- ========================== style-rtl.css ==========================  -->
+    <!-- <link rel="stylesheet" href="./assets/css/style-rtl.css"> -->
+
+    <!-- ========================== Main Style CSS ========================== -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- Reading progress -->
+    <div class="reading-progress" id="progress"></div>
+
+    <!-- ========================== Sidebar Overlay ========================== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ========================== Sidebar Panel ========================== -->
+    <div class="sidebar-panel" id="sidebarPanel">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <img src="./assets/img/logo_sidebar.svg" alt="Decoderz">
+            </div>
+            <button class="sidebar-close" id="sidebarClose">
+                <img src="./assets/img/close-circle.svg" alt="Close">
+            </button>
+        </div>
+
+        <div class="sidebar-content">
+            <h3 class="sidebar-title">Smart Business Consultancy</h3>
+            <p class="sidebar-subtitle">in New Milton</p>
+            <p style="color: #6b7280; font-size: 14px; margin-bottom: 30px;">
+                We denounce with righteous indignation and dislike men who are to beguiled demoralized by the charms of
+                pleasures that moment, so we blinded desires.
+            </p>
+
+            <h4 style="font-size: 16px; font-weight: 700; color: #1f2937; margin-bottom: 20px;">Contact Info</h4>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Address</h6>
+                    <p>98, Zahraa Street, Maadi, Cairo</p>
+                </div>
+            </div>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Email</h6>
+                    <p>info@decoder.com</p>
+                </div>
+            </div>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Phone</h6>
+                    <p>010-00-000-000</p>
+                </div>
+            </div>
+
+            <div class="sidebar-info-item">
+                <div class="sidebar-info-icon">
+                    <i class="far fa-clock"></i>
+                </div>
+                <div class="sidebar-info-content">
+                    <h6>Office Hours</h6>
+                    <p>Today 9:00am to 6:00pm</p>
+                </div>
+            </div>
+
+            <div class="sidebar-newsletter">
+                <h4>Newsletter Subscribe</h4>
+                <form class="newsletter-form">
+                    <div class="input-wrapper">
+                        <img src="./assets/img/emil.svg" alt="email icon" class="input-icon">
+                        <input type="email" placeholder="Enter your email address" required>
+                    </div>
+                    <button type="submit">Subscribe Us</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================== Top Bar ========================== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-bar-left">
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="0">
+                            <i class="far fa-clock"></i>
+                            <span>Office Hrs: Today 9:00am to 6:00pm</span>
+                        </div>
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="100">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+88 (0) 101 0000 000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="top-bar-right">
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="200">
+                            <i class="far fa-clock"></i>
+                            <span>Office Hrs: Today 9:00am to 6:00pm</span>
+                        </div>
+                        <div class="top-bar-item" data-aos="fade-down" data-aos-delay="300">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+88 (0) 101 0000 38</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================== Header / Navbar ========================== -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#" data-aos="fade-right" data-aos-duration="800">
+                    <img src="./assets/img/logo.svg" alt="Decoderz">
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="0">
+                            <a class="nav-link active" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="50">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown" data-aos="fade-down" data-aos-delay="100">
+                            <a class="nav-link" href="#" role="button">
+                                Services <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./service_details.html">Web Development</a></li>
+                                <li><a class="dropdown-item" href="./service_details.html">Mobile Apps</a></li>
+                                <li><a class="dropdown-item" href="./service_details.html">Digital Marketing</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" data-aos="fade-down" data-aos-delay="150">
+                            <a class="nav-link" href="#" role="button">
+                                Portfolio <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./portfolio.html">Web Design</a></li>
+                                <li><a class="dropdown-item" href="./portfolio.html">App Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="250">
+                            <a class="nav-link" href="./blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                            <button class="nav-toggle-btn" id="sidebarToggle">
+                                <img src="./assets/img/Icons.svg" alt="">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <div class="main-layout_blog">
+        <div class="article-hero">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1400&q=80"
+                alt="Artificial Intelligence" />
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container">
+                    <span class="category-badge">Technology</span>
+                    <h1 class="article-title">Artificial Intelligence Is Reshaping the Global Economic Landscape in 2025
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row g-4">
+
+                <!-- Article col-9 -->
+                <div class="col-md-8">
+                    <div class="article-body">
+                        <!-- Share bar -->
+                        <div class="share-bar">
+                            <span><i class="fas fa-share-alt me-1"></i> Share</span>
+                            <a class="share-btn fb" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="share-btn tw" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="share-btn wa" href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a class="share-btn li" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <span class="read-time"><i class="fas fa-book-open me-1"></i> Reading Time: 7 Minutes</span>
+                        </div>
+
+                        <!-- Lead -->
+                        <p class="article-lead">
+                            Artificial intelligence is driving a quiet yet profound revolution in the structure of the
+                            digital
+                            economy, as governments and major corporations race to secure leading positions in this
+                            heated
+                            contest that is redefining the very concepts of productivity, labor, and wealth.
+                        </p>
+
+                        <!-- Content -->
+                        <div class="article-content">
+                            <p>
+                                AI technologies are no longer mere supporting tools — they are fundamentally
+                                restructuring the
+                                strategies of major corporations from the ground up. Over the past five years, private
+                                sector
+                                investment in this field has multiplied dozens of times over, surpassing the
+                                one-trillion-dollar
+                                mark globally according to the latest reports.
+                            </p>
+
+                            <h2>How Is AI Reshaping the Labor Market?</h2>
+                            <p>
+                                Contrary to what some pessimists predicted, the wave of automation has not collapsed the
+                                labor
+                                market — it has restructured it. Routine jobs are indeed declining, but new job
+                                categories are
+                                emerging at an accelerating pace: from language model engineering and data ethics, to
+                                human
+                                creative design that remains beyond the reach of machines.
+                            </p>
+
+                            <blockquote>
+                                "We are not talking about an ordinary technological shift, but a complete redefinition
+                                of the
+                                very nature of intelligence and its role in human civilization."
+                                <footer style="font-size:.82rem;margin-top:.8rem;color:#7a7168;font-style:normal;">
+                                    — Dr. Sonia Martinez, Stanford Institute for Artificial Intelligence
+                                </footer>
+                            </blockquote>
+
+                            <p>
+                                Studies indicate that the skills most resilient to the automation wave are those that
+                                blend
+                                critical thinking with creativity and deep human communication — which restores value to
+                                humanities and arts curricula that were once considered secondary in the era of
+                                technological
+                                dominance.
+                            </p>
+
+                            <figure>
+                                <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=900&q=80"
+                                    alt="Data Centers" />
+                                <figcaption>Modern data centers — the backbone of the digital economy (Getty Images)
+                                </figcaption>
+                            </figure>
+
+                            <h2>The Geopolitical Equation in the Age of Data</h2>
+                            <p>
+                                Data is becoming the oil of the 21st century. Nations with advanced digital
+                                infrastructure and
+                                vast stores of local data are now defining the contours of the new balance of power. In
+                                this
+                                context, the major powers — particularly the United States, China, and the European
+                                Union — are
+                                competing to secure digital sovereignty and protect their data from infiltration or
+                                exploitation.
+                            </p>
+                            <p>
+                                The Arab world holds a rare historic opportunity if it can effectively leverage its
+                                young human
+                                capital in the emerging digital economy, coupled with focused investment in technical
+                                education
+                                and data infrastructure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar col-3 -->
+                <div class="col-md-4">
+                    <aside class="sidebar">
+
+                        <!-- Newsletter -->
+                        <div class="sidebar-widget newsletter-widget">
+                            <h4 class="widget-title">Newsletter</h4>
+                            <p>Subscribe and receive our top articles directly in your inbox.</p>
+                            <input type="email" class="form-control mb-2" placeholder="Your email address..." />
+                            <button class="btn-newsletter"><i class="fas fa-envelope me-2"></i> Subscribe for
+                                Free</button>
+                        </div>
+
+                        <!-- Related -->
+                        <div class="sidebar-widget">
+                            <h4 class="widget-title">Related Articles</h4>
+                            <a class="related-item" href="#">
+                                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=160&q=70"
+                                    alt="" />
+                                <div>
+                                    <h6>Next-Gen Robots: How Are They Learning to Handle Human Emotions?</h6>
+                                    <span class="date"><i class="fas fa-calendar me-1"></i> February 18, 2025</span>
+                                </div>
+                            </a>
+                            <a class="related-item" href="#">
+                                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=160&q=70"
+                                    alt="" />
+                                <div>
+                                    <h6>Quantum Computing: Are We Close to the Post-Computer Era?</h6>
+                                    <span class="date"><i class="fas fa-calendar me-1"></i> February 14, 2025</span>
+                                </div>
+                            </a>
+                            <a class="related-item" href="#">
+                                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?w=160&q=70"
+                                    alt="" />
+                                <div>
+                                    <h6>The Metaverse and the Virtual Economy: Is It All Just Hype?</h6>
+                                    <span class="date"><i class="fas fa-calendar me-1"></i> February 10, 2025</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Popular -->
+                        <div class="sidebar-widget">
+                            <h4 class="widget-title">Most Read</h4>
+                            <div class="popular-item">
+                                <span class="popular-num">01</span>
+                                <div>
+                                    <h6>How Dubai Became a Global Laboratory for Smart Cities</h6>
+                                    <span class="meta">32,100 Views</span>
+                                </div>
+                            </div>
+                            <div class="popular-item">
+                                <span class="popular-num">02</span>
+                                <div>
+                                    <h6>Renewable Energy in the Arab World: Reality and Ambition</h6>
+                                    <span class="meta">24,870 Views</span>
+                                </div>
+                            </div>
+                            <div class="popular-item">
+                                <span class="popular-num">03</span>
+                                <div>
+                                    <h6>The Future of Education: Will AI Eliminate the Teacher's Role?</h6>
+                                    <span class="meta">19,340 Views</span>
+                                </div>
+                            </div>
+                            <div class="popular-item">
+                                <span class="popular-num">04</span>
+                                <div>
+                                    <h6>Digital Currencies and Shifts in the Global Financial System</h6>
+                                    <span class="meta">15,200 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tags cloud -->
+                        <div class="sidebar-widget">
+                            <h4 class="widget-title">Popular Tags</h4>
+                            <a class="tag" href="#">Technology</a>
+                            <a class="tag" href="#">Economy</a>
+                            <a class="tag" href="#">Politics</a>
+                            <a class="tag" href="#">Science</a>
+                            <a class="tag" href="#">Culture</a>
+                            <a class="tag" href="#">Health</a>
+                            <a class="tag" href="#">Environment</a>
+                            <a class="tag" href="#">Sports</a>
+                            <a class="tag" href="#">Space</a>
+                        </div>
+
+                    </aside>
+                </div>
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end main-layout_blog -->
+    <!-- ========================== footer ========================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-left">
+                    <div class="logo">
+                        <img src="./assets/img/logo_main.svg" alt="">
+                    </div>
+                    <div class="cta-text">What will<br>be the next step?</div>
+                    <a href="#" class="cta-link">Experts advice</a>
+                </div>
+
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3 class="column-title">Company</h3>
+                        <ul class="column-links">
+                            <li><a href="#">About Evoqius</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Company History</a></li>
+                            <li><a href="#">Our Career</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3 class="column-title">Company</h3>
+                        <ul class="column-links">
+                            <li><a href="#">About Evoqius</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Company History</a></li>
+                            <li><a href="#">Our Career</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <h3 class="column-title">Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="./assets/img/main.jpg" alt="Project 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span style="color: #8b95a8;">/</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+                <div class="main_footer_lin">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">𝕏</a>
+                        <a href="#" class="social-icon">f</a>
+                    </div>
+                    <div class="copyright">
+                        2025 Decoderz. All Rights Reserved.
+                    </div>
+                </div>
+
+                <a href="#" class="back-to-home">Go back to home</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================== Floating RIGHT ========================== -->
+    <div class="floating-right">
+        <a href="https://wa.me/201000000000" target="_blank" class="float-btn btn-whatsapp" data-tooltip="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+201000000000" class="float-btn btn-call" data-tooltip="Call Us">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- ========================== Floating LEFT ========================== -->
+    <div class="floating-left">
+        <a href="https://facebook.com" target="_blank" class="float-btn" data-tooltip="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="float-btn" data-tooltip="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://x.com" target="_blank" class="float-btn" data-tooltip="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="float-btn" data-tooltip="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+    </div>
+
+    <!-- ========================== jQuery ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- ========================== Bootstrap JS ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========================== Slick Slider JS ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- ========================== ScrollReveal JS ========================== -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ========================== AOS JS ========================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- ========================== Lenis JS ========================== -->
+    <script src="https://unpkg.com/lenis@1.3.16/dist/lenis.min.js"></script>
+
+    <!-- ========================== Main Script JS ========================== -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
